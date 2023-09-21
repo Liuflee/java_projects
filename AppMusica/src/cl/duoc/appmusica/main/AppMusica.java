@@ -30,18 +30,15 @@ public class AppMusica {
         Cancion cancion6 = new Cancion("GASSHOW", artista2, 550, true, true);
         
         
-        ArrayList<Cancion> listaCanciones1 = new ArrayList<>();
-        Playlist playlist1 = new Playlist(listaCanciones1);
-        listaCanciones1.add(cancion1);
-        listaCanciones1.add(cancion2);
-        listaCanciones1.add(cancion3);
-        
-        
-        ArrayList<Cancion> listaCanciones2 = new ArrayList<>();
-        Playlist playlist2 = new Playlist(listaCanciones2);
-        listaCanciones2.add(cancion4);
-        listaCanciones2.add(cancion5);
-        listaCanciones2.add(cancion6);
+        Playlist listaCanciones1 = new Playlist();
+        listaCanciones1.agregarCancion(cancion1);
+        listaCanciones1.agregarCancion(cancion2);
+        listaCanciones1.agregarCancion(cancion3);
+     
+        Playlist listaCanciones2 = new Playlist();
+        listaCanciones2.agregarCancion(cancion4);
+        listaCanciones2.agregarCancion(cancion5);
+        listaCanciones2.agregarCancion(cancion6);
         
         Scanner sc = new Scanner(System.in);
         int opc;
@@ -55,17 +52,16 @@ public class AppMusica {
             
             switch (opc) {
                 case 1:
-                    playlist1.mostrarLista();
+                    listaCanciones1.mostrarLista();
                     break;
                 case 2:
-                    playlist2.mostrarLista();
+                    listaCanciones2.mostrarLista();
                     break;
                 case 3:
                     System.out.println("Saliendo del programa");
                     break;
                 default:
                     System.out.println("Fuera de rango");
-                    continue;
             }
             
             

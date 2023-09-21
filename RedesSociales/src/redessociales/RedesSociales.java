@@ -15,6 +15,8 @@ public class RedesSociales {
     /**
      * @param args the command line arguments
      */
+
+    
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -36,6 +38,7 @@ public class RedesSociales {
             System.out.println("2 - Crear una noticia en Twitter");
             System.out.println("3 - Salir");
             opc = sc.nextInt();
+            
             switch (opc) {
                 
                 case 1:
@@ -93,6 +96,7 @@ public class RedesSociales {
             }
             
         } while(opc != 3);
+        
         
     }
     

@@ -15,14 +15,12 @@ public class Playlist {
     private ArrayList<Cancion> listaCanciones;
     
     public Playlist() {
-        
+        listaCanciones = new ArrayList<Cancion>();
     }
-    public Playlist(ArrayList<Cancion> listaCanciones) {
-        this.listaCanciones = listaCanciones;
-    }
+ 
     
-    public void agregarCancion(Cancion cancion) {
-        this.listaCanciones.add(cancion);
+    public boolean agregarCancion(Cancion cancion) {
+        return this.listaCanciones.add(cancion);
     }
     
     public void mostrarLista() {
@@ -39,5 +37,6 @@ public class Playlist {
     
     }
     
+ 
     
 }
